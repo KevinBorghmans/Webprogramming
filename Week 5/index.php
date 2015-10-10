@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
   <head>
     <title>Geolocation</title>
@@ -11,7 +13,7 @@
         padding: 0;
       }
       #map {
-        height: 100%;
+        height: 75%;
         width: 100%;
       }
     </style>
@@ -51,6 +53,9 @@ function initMap() {
         var geocoder = new google.maps.Geocoder;
         var lat = position.coords.latitude
         var long = position.coords.longitude
+        document.getElementById('lat').value = lat;
+        document.getElementById('long').value = long;
+        
         
            
 
@@ -69,6 +74,7 @@ function initMap() {
           map: map
         });
         infowindow.setContent(results[1].formatted_address);
+        document.getElementById('geo').value = (results[1].formatted_address);
         infowindow.open(map, marker);
       } else {
         window.alert('No results found');
@@ -105,10 +111,19 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: The Geolocation service failed.' :
                         'Error: Your browser doesn\'t support geolocation.');
 }
+        
+      
 
     </script>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFHrwfWHaoDw9rFf2ArKuJ9-T5Z3JW0mE&callback=initMap">
     </script>
+    
+<form action="test.php" method="get">
+        <input id="lat" type="text" name="lat" value="" hidden>
+        <input id="long" type="text" name="long" value="" hidden>
+        <input id="geo" type="text" name="geo" value="" hidden>
+        <input type="submit">
+</form>
   </body>
 </html>
