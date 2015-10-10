@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html>
   <head>
     <title>Geolocation</title>
@@ -119,7 +118,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFHrwfWHaoDw9rFf2ArKuJ9-T5Z3JW0mE&callback=initMap">
     </script>
     
-<form action="test.php" method="get">
+<form action="test.php" method="post">
         <input id="lat" type="text" name="lat" value="" hidden>
         <input id="long" type="text" name="long" value="" hidden>
         <input id="geo" type="text" name="geo" value="" hidden>
