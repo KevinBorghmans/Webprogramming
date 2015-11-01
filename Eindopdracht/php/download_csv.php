@@ -1,12 +1,12 @@
 <?php 
-include 'connect.php';
+include '../include/connect.php';
 
 header('Content-Type: text/csv; charset=utf-8');
 header('Content-Disposition: attachment; filename=data.csv');
 
 $fp = fopen('php://output', 'w');
 
-$query ='SELECT * FROM WP#!';	
+$query ='SELECT * FROM location, user, gallery';	
 $result = mysqli_query($con, $query);
 
 $num_rows = mysqli_num_rows($result);

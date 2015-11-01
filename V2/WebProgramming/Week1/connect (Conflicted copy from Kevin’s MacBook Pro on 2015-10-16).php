@@ -2,9 +2,9 @@
 
 //maak connectie met de database
 DEFINE('DB_HOST', 'localhost');					//servername
-DEFINE('DB_USERNAME', 'bright1q');					//server username
-DEFINE('DB_PASSWORD', 'ysYtUvY@EtYp');					//server password
-DEFINE('DB_DATABASE', 'bright1q_wp31');			//server 
+DEFINE('DB_USERNAME', 'root');					//server username
+DEFINE('DB_PASSWORD', 'root');					//server password
+DEFINE('DB_DATABASE', 'WP31');			//server 
 
 $con = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
